@@ -1,0 +1,30 @@
+.info-bar {
+  padding: em(30);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  background: rgba(#131313, .7);
+
+  p {
+    font-size: em(18);
+    letter-spacing: 2px;
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  h2 {
+    text-align: center;
+    color: $white;
+  }
+
+  @include mq($bp-m) {
+    bottom: 10%;
+  }
+}
+
+.etsy-logo {
+  margin-left: .5em;
+  position: relative;
+  top: 9px
+}

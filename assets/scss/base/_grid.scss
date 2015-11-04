@@ -1,0 +1,209 @@
+[class*="span4"] {
+	width: 100%; 
+	display: block;
+	float: left;
+}
+
+.span-right {
+	float: right !important;
+}
+
+.span-right-bp-s {
+	
+	@include mq-max($bp-s) {
+		float: right !important;
+	}
+}
+
+.span-right-bp-m {
+	
+	@include mq-max($bp-m) {
+		float: right !important;
+	}
+}
+
+.span-right-bp-l {
+	
+	@include mq-max($bp-l) {
+		float: right !important;
+	}
+}
+
+.span-right-bp-xl {
+	
+	@include mq-max($bp-xl) {
+		float: right !important;
+	}
+}
+
+// ------------------------------------------------------------
+
+
+// Standard row
+// Rows should contain columns as children
+// You can use multiple grid denominations within each breakpoint, but each breakpoint must have unique column set-up
+// For example, you can have a 6 and 8 column grid at breakpoint b, but you can't use 6 or eight columns in other breakpoints
+.row {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $max-width;
+	
+	@include mq($bp-s) { 
+		@include grid-columns(4); 	// Four column grid
+	}
+	
+	@include mq($bp-m) { 
+		@include grid-columns(6);	// Six column grid
+	}
+	
+	@include mq($bp-l) { 
+		@include grid-columns(8);	// Eight column grid
+	}
+	
+	@include mq($bp-xl) { 
+		@include grid-columns(12);	// Twelve column grid
+	}
+	
+
+	// IE less than 9 
+	.lt-ie9 & {
+		@include grid-columns(8);	// Twelve column grid
+		width: $ie-width;
+	}
+}
+
+.row__colspaced {
+	position: relative;
+	@extend %cf;
+	margin-left: -$spacing/2;
+	margin-right: -$spacing/2;
+	
+	[class*="span"] {
+		padding-left: $spacing/2;	
+		padding-right: $spacing/2;			
+	}
+}
+
+.row--pad {
+	padding: $spacing;
+
+	@include mq($bp-m, true) { 
+		padding: $spacing*2 $spacing;
+	}
+	
+/*
+	@include mq($bp-l, true) { 
+		padding: $spacing*2.5 $spacing;
+	}
+	
+*/
+/*
+	& ~ .row--pad {
+		padding-top: 0;
+	}
+*/
+	
+}
+
+.row--no-top-pad {
+	padding-top: 0;
+}
+
+.row--no-bottom-pad {
+	padding-bottom: 0;
+}
+
+.row--no-vert-pad {
+	padding-bottom: 0;
+	padding-top: 0;
+	
+}
+
+.row--wide {
+
+	@include mq-min-max(0, $bp-l) {	
+
+		.row__colspaced  {
+			margin-left: -$spacing*1.5;
+			margin-right: -$spacing*1.5;
+		}
+	}
+}
+
+// margin and clears for different widths
+
+// four-column-grid
+
+.four-column-grid {
+	
+	[class*="span"] {
+		margin-top: $spacing;
+		
+	}
+	
+	@include mq($bp-m, true) {
+		
+		[class*="span"] {
+			
+			&:nth-child(3) {
+				clear:left;
+			}
+		}
+	}
+	
+	@include mq($bp-xl) {
+		
+		[class*="span"] {
+			
+			&:nth-child(3) {
+				clear:none;
+			}			
+		}
+	}	
+}
+
+// hiding classes
+
+.hide-to-bp-s {
+	
+	@include mq-max($bp-s) {
+		display: none;
+	}
+}
+
+.hide-to-bp-m {
+	
+	@include mq-max($bp-m) {
+		display: none;
+	}
+}
+
+.hide-to-bp-l {
+	
+	@include mq-max($bp-l, true) {
+		display: none;
+	}
+}
+
+.hide-to-bp-xl {
+	
+	@include mq-max($bp-xl) {
+		display: none;
+	}
+}
+
+.hide-when-menu-active {
+	
+	.is-active-menu & {
+		display: none;
+	}
+}
+
+.show-when-menu-active {
+	display: none;
+	
+	.is-active-menu & {
+		display: block;
+	}
+}

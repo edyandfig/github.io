@@ -1,0 +1,121 @@
+@mixin rgba-fallback($color:#000, $opacity:0.3, $fallback:#a7a7a7, $type:bg) {
+  @if $type == color {
+    color: $fallback;
+    color: rgba($color, $opacity);
+  }
+ 
+  @if $type == bg {
+    background-color: $fallback;
+    background-color: rgba($color, $opacity);
+  }
+}
+
+	
+// -------------------------------------------------------
+// Align things vertically (http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/)
+// -------------------------------------------------------
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+// -------------------------------------------------------
+// List styles
+// -------------------------------------------------------
+
+// Mixins for list style types
+@mixin unordered {
+	 list-style-position: outside; 
+	 list-style-type: disc;
+}
+
+@mixin unordered-inside {
+	 list-style-position: inside; 
+	 list-style-type: disc;
+}
+
+@mixin ordered {
+	list-style-position: outside; 
+	list-style-type: decimal;
+}
+
+@mixin ordered-inside {
+	list-style-position: inside; 
+	list-style-type: decimal;
+}
+
+@mixin nobullet {
+	list-style-type: none;
+}
+
+// -------------------------------------------------------
+// Links
+// -------------------------------------------------------
+
+@mixin links($color: $action, $adjust: darken, $percent: 15%) {
+	text-decoration: none;
+	color: $color;
+	transition: color .3s;
+	
+	&:hover {
+		
+		@if $adjust == lighten {
+			color: lighten($color, $percent);
+		}
+		@else {
+			color: darken($color, $percent);
+		}
+	}
+}
+
+@mixin posh-links($color: $action) {
+	color: $color;
+	position: relative;
+	display: inline-block;
+	margin-bottom: 14px;
+	
+	&::after {
+		content: '';		
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background: $color;
+		opacity: 0;
+		transition: height 0.3s, opacity 0.3s, transform 0.3s;
+		transform: translateY(-10px);
+	}
+
+	&:hover::after,
+	&:focus::after {
+		height: 4px;
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@mixin clean-button() {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-user-select: none;
+
+	&::-moz-focus-inner {
+  	border: 0;
+		padding: 0;
+	}
+	
+	&:focus {
+		outline: none;
+	}
+}
+

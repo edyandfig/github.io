@@ -1,0 +1,14 @@
+# Site settings
+title: "Edy & Fig"
+description: "A simple little site for Suzie."
+# url: "http://yourdomain.com"
+
+# Build settings
+markdown: kramdown
+exclude: ["node_modules", "gulpfile.js", "package.json", "assets/scss"]
+
+defaults:
+  scope:
+    path: ""
+    values:
+      layout: "default"

@@ -1,0 +1,78 @@
+/*------------------------------------*\
+   Colours
+\*------------------------------------*/
+
+$white: #fff;
+$black: #000;
+$grey5: darken($white, 5%);
+$grey10: darken($white, 10%);
+$grey25: darken($white, 25%);
+$grey40: darken($white, 40%);
+$grey55: darken($white, 55%);
+$grey70: darken($white, 70%);
+$grey85: darken($white, 85%);
+
+$primary: #4a7a8f;
+$secondary: #d57554;
+$copy: #858482;
+$headings: $copy;
+$action: $secondary;
+$background: #3A3A3A;
+
+$footer-background: $grey70;
+$footer-links: $grey10;
+$footer-copy: $grey25;
+
+
+
+/*------------------------------------*\
+    Variables
+\*------------------------------------*/
+
+$copy-face: 'Avenir W01', sans-serif;
+$headings-face: $copy-face;
+
+/*------------------------------------*\
+    Sizes
+\*------------------------------------*/
+$bp-xs: 18.75em;	// 300
+$bp-s: 26.25em;	// 420
+$bp-m: 37.5em; // 600
+$bp-l: 56.25em; // 900
+$bp-xl: 68.75em; // 1100
+$bp-xxl: 81.25em; // 1300
+
+$ie-width: 60em; // 960 Viewport for IE8 fixed width
+$max-width: $bp-xl;
+
+// At some point, you'll want to switch from a one column view to multi-column.
+$start-columns 						: $bp-xs;
+
+// fonts
+$default-font-size: 1em;
+$footer-font-size: $default-font-size;
+
+// spacing
+$spacing: 1.5em;
+$spacing-percent: 5%;		// Used by grid system
+
+// signup forms
+$sb-width: 272;
+$sb-height: 45;
+$sb-lines: #ddd;
+
+/*------------------------------------*\
+    Global
+\*------------------------------------*/
+
+// Box-size everything FTW - http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+
+/*------------------------------------*\
+    Maps
+\*------------------------------------*/
