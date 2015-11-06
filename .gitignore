@@ -2,8 +2,5 @@
 _site
 .idea
 .jekyll-metadata
-assets/css/
 assets/images/temp/
 node_modules
-assets/js/footer.min.js
-assets/js/footer.js
