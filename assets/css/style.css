@@ -979,6 +979,9 @@ strong, b {
 .site-title {
   color: #3A3A3A;
   margin: 0; }
+  @media screen and (max-width: 26.1875em) {
+    .site-title {
+      font-size: 3em; } }
 
 .icon {
   display: inline-block;

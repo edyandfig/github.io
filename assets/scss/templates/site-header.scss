@@ -17,4 +17,8 @@
 .site-title {
   color: $background;
   margin: 0;
+
+  @include mq-max($bp-s) {
+    font-size: 3em;
+  }
 }
