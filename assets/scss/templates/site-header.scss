@@ -3,7 +3,7 @@
   z-index: 2;
   width: 100%;
   text-align: center;
-  top: em(15);
+  top: em(20);
 
   @include mq($bp-m) {
     top: em(30);
@@ -29,8 +29,8 @@
   font-size: 1em;
   text-indent: -9999px;
   overflow: hidden;
-  width: 250px;
-  height: 100px;
+  width: 275px;
+  height: 120px;
   background: url('/assets/images/edyandfig.svg') center top no-repeat;
   background-size: contain;
 
