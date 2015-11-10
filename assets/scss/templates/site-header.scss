@@ -3,7 +3,11 @@
   z-index: 2;
   width: 100%;
   text-align: center;
-  top: em(30);
+  top: em(15);
+
+  @include mq($bp-m) {
+    top: em(30);
+  }
 }
 
 .welcome {
