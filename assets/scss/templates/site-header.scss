@@ -12,11 +12,16 @@
   text-transform: uppercase;
   font-size: em(20);
   letter-spacing: 3px;
+  display: none;
+
+  @include mq($bp-m) {
+    display: block;
+  }
 }
 
 .site-title {
   color: $background;
-  margin: 1em auto 0 auto;
+  margin: 0 auto 0 auto;
   font-size: 1em;
   text-indent: -9999px;
   overflow: hidden;
@@ -33,6 +38,7 @@
   @include mq($bp-m) {
     width: 400px;
     height: 200px;
+    margin-top: 1em;
   }
 
   @include mq($bp-l) {
