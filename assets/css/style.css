@@ -978,10 +978,26 @@ strong, b {
 
 .site-title {
   color: #3A3A3A;
-  margin: 0; }
-  @media screen and (max-width: 26.1875em) {
+  margin: 1em auto 0 auto;
+  font-size: 1em;
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 250px;
+  height: 100px;
+  background: url("/assets/images/edyandfig.svg") center top no-repeat;
+  background-size: contain; }
+  @media screen and (min-width: 26.25em) {
     .site-title {
-      font-size: 3em; } }
+      width: 300px;
+      height: 125px; } }
+  @media screen and (min-width: 37.5em) {
+    .site-title {
+      width: 400px;
+      height: 200px; } }
+  @media screen and (min-width: 56.25em) {
+    .site-title {
+      width: 500px;
+      height: 250px; } }
 
 .icon {
   display: inline-block;

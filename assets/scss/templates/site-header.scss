@@ -16,9 +16,27 @@
 
 .site-title {
   color: $background;
-  margin: 0;
+  margin: 1em auto 0 auto;
+  font-size: 1em;
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 250px;
+  height: 100px;
+  background: url('/assets/images/edyandfig.svg') center top no-repeat;
+  background-size: contain;
 
-  @include mq-max($bp-s) {
-    font-size: 3em;
+  @include mq($bp-s) {
+    width: 300px;
+    height: 125px;
+  }
+
+  @include mq($bp-m) {
+    width: 400px;
+    height: 200px;
+  }
+
+  @include mq($bp-l) {
+    width: 500px;
+    height: 250px;
   }
 }
